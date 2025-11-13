@@ -12,4 +12,5 @@ const recipe = {
 
 console.log(`${recipe.title} serves ${recipe.serves}
   ingredients:
-${recipe}`);
+/*${recipe}`);*/  //incomplete instructions, To show data inside we need to add more properties
+${recipe.ingredients.join(", ")}`);
