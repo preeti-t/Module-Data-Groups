@@ -10,3 +10,23 @@ test("parses querystring values containing =", () => {
     "equation": "x=y+1",
   });
 });
+
+test("parses multiple key-value pairs", () => {
+  expect(parseQueryString("a=1&b=2")).toEqual({ a: "1", b: "2" });
+});
+
+test("handles empty query string", () => {
+  expect(parseQueryString("")).toEqual({});
+});
+
+test("handles values with multiple =", () => {
+  expect(parseQueryString("formula=a=b=c=d")).toEqual({ formula: "a=b=c=d" });
+});
+
+test("handles keys with no value", () => {
+  expect(parseQueryString("flag")).toEqual({ flag: "" });
+});
+
+test("handles multiple & with some empty pairs", () => {
+  expect(parseQueryString("a=1&&b=2&c")).toEqual({ a: "1", b: "2", c: "" });
+});
