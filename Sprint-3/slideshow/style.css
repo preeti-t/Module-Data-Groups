@@ -1,1 +1,37 @@
 /** Write your CSS in here **/
+body {
+    background-color: rgb(242, 106, 106);
+}
+
+#carousel-img {
+    width: 745px;
+    height: 559px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* minor visual improvement */
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px; /* slightly smoother spacing */
+    margin-top: 20px;
+}
+
+.button {
+    background-color: bisque;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px; /* fixing invalid font-size line */
+    font-style: oblique;
+    border-radius: 8px;
+    padding: 10px 24px;
+    cursor: pointer;
+    border: none; /* minor improvement */
+    transition: transform 0.2s ease; /* subtle UX enhancement */
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
