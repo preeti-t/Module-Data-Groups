@@ -1,1 +1,41 @@
 /** Write your CSS in here **/
+body {
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: bisque;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 70px; /* slightly smaller for balance */
+    letter-spacing: 2px; /* minor polish */
+}
+
+#quote {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: black;
+    font-size: 45px; /* toned down for readability */
+    text-align: center;
+    padding: 20px; /* gives breathing room */
+}
+
+#author {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ddd; /* softer contrast */
+    background-color: black;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+#new-quote {
+    margin-left: 70px;
+    padding: 12px 18px;
+    border: 2px solid black; 
+    border-radius: 12px; 
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
