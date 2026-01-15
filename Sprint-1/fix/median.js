@@ -8,21 +8,20 @@
 function calculateMedian(list) {
   if (!Array.isArray(list)) return null;
 
-  // just numbers
-  const numbers = list.filter(x => typeof x === 'number');
+  // just valid numbers (exclude NaN)
+  const numbers = list.filter(
+    x => typeof x === 'number' && !isNaN(x)
+  );
 
   if (numbers.length === 0) return null;
 
-  numbers.sort((a, b) => a - b);   //order from smallest to largest
+  numbers.sort((a, b) => a - b);
 
   const middleIndex = Math.floor(numbers.length / 2);
 
- 
   if (numbers.length % 2 !== 0) {
     return numbers[middleIndex];
-  } 
-  
-  else {
+  } else {
     return (numbers[middleIndex - 1] + numbers[middleIndex]) / 2;
   }
 }
